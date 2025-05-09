@@ -1,0 +1,92 @@
+Here's a complete and clean **README.md** you can copy and paste for your API project:
+
+---
+
+# 🐍 Pokémon API Connector
+
+This is a simple Python project that connects to the [PokeAPI](https://pokeapi.co/) to fetch information about a Pokémon using its name. It demonstrates how to perform a basic API GET request using the `requests` library.
+
+## 📁 Project Structure
+
+```
+API_Connect/
+│
+├── API_Connect_Program.py   # Main Python script
+└── README.md                # Project documentation
+```
+
+## 🚀 Features
+
+* Connects to the [PokeAPI](https://pokeapi.co/)
+* Retrieves details such as:
+
+  * Pokémon name
+  * Weight
+  * ID
+* Handles errors such as 404 (Not Found)
+
+## 🧰 Requirements
+
+* Python 3.x
+* `requests` library
+
+Install dependencies using:
+
+```bash
+pip install requests
+```
+
+## 📄 Usage
+
+Run the script with Python:
+
+```bash
+python API_Connect_Program.py
+```
+
+## 🔍 Example Output
+
+```bash
+pikachu
+60
+25
+```
+
+## 🧠 Code Overview
+
+```python
+import requests
+
+base_url = "https://pokeapi.co/api/v2/"
+
+def get_pokemon_info(name):
+    url = f"{base_url}/pokemon/{name}"
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        return response.json()
+    elif response.status_code == 404:
+        print('Page not found error')
+    else:
+        print(f'Failed to retrieve data {response.status_code}')
+
+pokemon_name = "pikachu"
+pokemon_info = get_pokemon_info(pokemon_name)
+
+if pokemon_info:
+    print(f"{pokemon_info['name']}")
+    print(f"{pokemon_info['weight']}")
+    print(f"{pokemon_info['id']}")
+```
+
+## 📬 API Reference
+
+* Endpoint used: `https://pokeapi.co/api/v2/pokemon/{name}`
+
+## 📝 License
+
+This project is open source and free to use.
+
+---
+
+
