@@ -1,5 +1,5 @@
-````markdown
-# ⏰ Python Alarm Clock with Music
+
+## ⏰ Python Alarm Clock with Music
 
 This is a simple Python script that allows you to set an alarm for a specific time. When the alarm time is reached, it plays an MP3 sound file using `pygame`.
 
@@ -64,6 +64,3 @@ README.md
 This project is open source and free to use for personal projects.
 
 ```
-
----
-
