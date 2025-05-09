@@ -1,4 +1,4 @@
-#HOW TO CONNECT API USING PYTHON
+#TO CONNECT API USING PYTHON
 import requests
 
 base_url="https://pokeapi.co/api/v2/"
